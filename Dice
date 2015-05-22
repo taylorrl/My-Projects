@@ -1,0 +1,20 @@
+using System;
+
+namespace Dice
+{
+    class Project
+    {
+
+        static void CheckEnter(object sender, System.Windows.Dice.KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                Random rand = new Random();
+                int num = rand.Next(1, 7);
+                Console.WriteLine("You have rolled a");
+                Console.WriteLine(num);
+                Console.ReadKey();
+            }
+        }
+    }
+}
