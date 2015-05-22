@@ -1,0 +1,28 @@
+using System;
+
+namespace Bday
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DateTime bday = new DateTime(1998, 3, 1);
+            DateTime currentDate = DateTime.Now;
+
+            long elapsedTicks = currentDate.Ticks - bday.Ticks;
+            TimeSpan elapsedSpan = new TimeSpan(elapsedTicks);
+
+            Console.WriteLine("Elapsed from my birthday to {0:f}:",
+            currentDate);
+            Console.WriteLine(" {0:N0} nanoseconds", elapsedTicks * 100);
+            Console.WriteLine(" {0:N0} ticks", elapsedTicks);
+            Console.WriteLine(" {0:N2} seconds", elapsedSpan.TotalSeconds);
+            Console.WriteLine(" {0:N2} minutes", elapsedSpan.TotalMinutes);
+            Console.WriteLine(" {0:N0} days, {1} hours, {2} minutes, {3} seconds",
+            elapsedSpan.Days, elapsedSpan.Hours,
+            elapsedSpan.Minutes, elapsedSpan.Seconds);
+
+            Console.ReadLine();
+        }
+    }
+}
