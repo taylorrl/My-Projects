@@ -1,0 +1,10 @@
+    static void Main(string[] args)
+    {
+    String Str1, Str2;
+        Console.WriteLine("Enter a word to translate it to Pig Latin: ");
+        Str1 = Console.ReadLine();
+        Str2 = Str1.Substring(0, 1);
+        Console.WriteLine("Translation: " + Str1.Substring(1) + Str2 + "ay");
+        Console.ReadLine();
+    }
+}
